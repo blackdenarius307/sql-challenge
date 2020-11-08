@@ -46,3 +46,20 @@ INNER JOIN employees ON
 	dept_emp.emp_no = employees.emp_no
 INNER JOIN departments ON
 	dept_emp.dept_no = departments.dept_no;
+SELECT * FROM employees;
+
+--Finding Hercules, son of Zeus... Zeus did get quite busy as you might know.
+SELECT 
+	first_name,
+	last_name,
+	sex
+FROM
+	employees
+WHERE
+	first_name
+LIKE
+	'Hercules%'
+AND
+	last_name
+LIKE
+	'B%';
