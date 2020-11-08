@@ -20,7 +20,7 @@ FROM
 WHERE
 	hire_date LIKE '%1986';
 
--- Time to get Double Jointed
+--Finding managers and their departments
 SELECT
 	dept_manager.dept_no,
 	departments.dept_name,
@@ -33,4 +33,16 @@ INNER JOIN departments ON
 	dept_manager.dept_no = departments.dept_no
 INNER JOIN employees ON
 	dept_manager.emp_no = employees.emp_no;
-	
+
+--Finding Employees and their departments
+SELECT
+	dept_emp.emp_no,
+	employees.last_name,
+	employees.first_name,
+	departments.dept_name
+FROM
+	dept_emp
+INNER JOIN employees ON
+	dept_emp.emp_no = employees.emp_no
+INNER JOIN departments ON
+	dept_emp.dept_no = departments.dept_no;
