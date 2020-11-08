@@ -46,7 +46,6 @@ INNER JOIN employees ON
 	dept_emp.emp_no = employees.emp_no
 INNER JOIN departments ON
 	dept_emp.dept_no = departments.dept_no;
-SELECT * FROM employees;
 
 --Finding Hercules, son of Zeus... Zeus did get quite busy as you might know.
 SELECT 
@@ -78,6 +77,7 @@ INNER JOIN departments ON
 	dept_emp.dept_no = departments.dept_no
 WHERE
 	dept_name = 'Sales';
+
 --Bring out the Developers too! We need more blood sacrifices to theater!
 SELECT
 	employees.emp_no,
@@ -94,6 +94,7 @@ WHERE
 	dept_name = 'Sales'
 OR
 	dept_name = 'Development';
+
 -- Order by last names 
 SELECT
 	last_name, COUNT(last_name) AS 'Last Name Count'
