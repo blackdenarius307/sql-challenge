@@ -95,15 +95,7 @@ WHERE
 OR
 	dept_name = 'Development';
 
--- Order by last names 
-SELECT
-	last_name, COUNT(last_name) AS 'Last Name Count'
-FROM
-	employees
-GROUP BY 
-	last_name
-ORDER BY 
-	'Last Name Count' DESC;
+-- Order by count of last names 
 SELECT last_name, COUNT(last_name) AS "Last Name Count"
 FROM employees
 GROUP BY last_name
